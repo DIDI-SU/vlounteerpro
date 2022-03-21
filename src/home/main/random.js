@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./random.css";
+import { items } from "./maindata";
 
 function Random() {
   const [pic, setPic] = useState(null);
@@ -12,7 +14,7 @@ function Random() {
         setPic(null);
         setLoading(true);
         const response = await axios.get(
-          `https://jsonplaceholder.typicode.com/photos?_start=0&_limit=3`
+          `https://jsonplaceholder.typicode.com/photos?_start=0&_limit=5`
         );
         setPic(response.data);
       } catch (e) {
@@ -26,11 +28,13 @@ function Random() {
   if (loading) return <div>로딩중..</div>;
   if (error) return <div>에러가 발생했습니다</div>;
   if (!pic) return null;
+
   return (
-    <article>
+    <article class="topArticle">
       {pic.map((item) => (
-        <div>
+        <div class="randomDiv">
           <img src={item.thumbnailUrl}></img>
+          <p>{item.title}</p>
         </div>
       ))}
     </article>
