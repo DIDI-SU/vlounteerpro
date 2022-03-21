@@ -2,7 +2,10 @@ import React from "react";
 
 export const info = [
   {
-    who: { name: "", info: "" },
+    who: {
+      name: "만든사람",
+      info: "잘하지 못하는 것을 도전해보려 노력하는 편이에요!,이 세상은 놀이터이니 경쟁보다 즐거움을 더 좋아합니다",
+    },
   },
   {
     projectInfo: {
