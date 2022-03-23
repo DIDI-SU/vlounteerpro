@@ -1,0 +1,13 @@
+footer {
+  height: 200px;
+  background-color: wheat;
+}
+.footerDiv {
+  padding: 30px;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  margin: 10px;
+}

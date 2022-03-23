@@ -1,4 +1,5 @@
-import IconImage from "../../icon/Bigicon.png";
+import IconImage from "../icon/Bigicon.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -8,12 +9,13 @@ function Header() {
       </a>
       <nav>
         <ol>
-          <li>Home</li>
-          <li>Main</li>
-          <li>Contact</li>
+          <Link to="/">Home</Link>
+          <Link to="/main">Main</Link>
+          <Link to="/">Contact</Link>
         </ol>
       </nav>
     </header>
   );
 }
+
 export default Header;

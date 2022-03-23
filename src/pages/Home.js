@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { info } from "./forHome";
 import axios from "axios";
 import "./random.css";
-import { items } from "./maindata";
 
 function Random() {
   const [pic, setPic] = useState(null);
@@ -41,4 +41,22 @@ function Random() {
   );
 }
 
-export default Random;
+function Home() {
+  return (
+    <>
+      {" "}
+      <Random></Random>
+      <article>
+        {info.map((item) => (
+          <>
+            {" "}
+            <h1>{item.who ? item.who.name : item.projectInfo.name}</h1>
+            <p>{item.who ? item.who.info : item.projectInfo.info}</p>
+          </>
+        ))}
+      </article>
+    </>
+  );
+}
+
+export default Home;
