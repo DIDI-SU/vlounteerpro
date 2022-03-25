@@ -60,3 +60,18 @@ function Home() {
 }
 
 export default Home;
+var obj1 = {
+  outer: function () {
+    console.log(this);
+    var inner = function () {
+      console.log(this);
+    };
+    inner();
+    var self = this;
+    var inner2 = function () {
+      console.log(self);
+    };
+    inner2();
+  },
+};
+obj1.outer();

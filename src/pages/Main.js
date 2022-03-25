@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import "./content.css";
-
+import axios from "axios";
+import DataMain from "../data";
 function Content() {
   const [text, setText] = useState("");
   const onChange = (e) => {
@@ -61,9 +62,7 @@ function Content() {
 function Main() {
   return (
     <>
-      <Header></Header>
-      <Content></Content>
-      <Footer></Footer>
+      <DataMain></DataMain>
     </>
   );
 }
